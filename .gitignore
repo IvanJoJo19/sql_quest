@@ -1,0 +1,24 @@
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs and temporary files
+*.log
+tmp/
+temp/
+.env
+backend-test.out
+backend-test.err
+postgres.log
+backend-launch.*.log
+
+# Future frontend/backend dependencies
+node_modules/
+dist/
+build/
+release/
+*.exe
+.venv/
+__pycache__/

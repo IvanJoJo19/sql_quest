@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SQL Quest</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark">SQL</span>
+          <div>
+            <h1>SQL Quest</h1>
+            <p>Тренажер с ИИ-помощником</p>
+          </div>
+        </div>
+
+        <section class="progress-panel" aria-label="Прогресс">
+          <div class="panel-title">Прогресс</div>
+          <div class="progress-ring">
+            <span id="progressValue">0%</span>
+          </div>
+          <p id="progressText">Решено 0 из 6 заданий</p>
+        </section>
+
+        <nav class="lesson-list" id="lessonList" aria-label="Список заданий"></nav>
+      </aside>
+
+      <section class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">PostgreSQL-песочница</p>
+            <h2 id="taskTitle">Загрузка задания</h2>
+          </div>
+          <button class="ghost-button" id="resetButton" type="button">Сбросить</button>
+        </header>
+
+        <section class="task-grid">
+          <article class="task-panel">
+            <div class="panel-title">Задание</div>
+            <p id="taskDescription"></p>
+            <div class="goal-box" id="taskGoal"></div>
+          </article>
+
+          <article class="schema-panel">
+            <div class="panel-title">Таблицы</div>
+            <div id="schemaView"></div>
+          </article>
+        </section>
+
+        <section class="editor-panel">
+          <div class="editor-header">
+            <div class="panel-title">SQL-запрос</div>
+            <div class="editor-actions">
+              <button id="hintButton" class="secondary-button" type="button">Подсказка ИИ</button>
+              <button id="runButton" class="primary-button" type="button">Запустить</button>
+            </div>
+          </div>
+          <textarea id="sqlEditor" spellcheck="false"></textarea>
+          <div class="feedback" id="feedback"></div>
+        </section>
+
+        <section class="result-panel">
+          <div class="panel-title">Результат</div>
+          <div class="table-wrap" id="resultTable"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

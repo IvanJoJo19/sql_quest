@@ -1,0 +1,38 @@
+{
+  "name": "sql-quest",
+  "version": "1.0.0",
+  "description": "SQL Quest desktop launcher",
+  "main": "electron-main.js",
+  "private": true,
+  "scripts": {
+    "desktop": "electron .",
+    "build:win": "electron-builder --win portable"
+  },
+  "devDependencies": {
+    "electron": "^33.4.11",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "local.sqlquest.app",
+    "productName": "SQL Quest",
+    "files": [
+      "electron-main.js",
+      "backend.py",
+      "index.html",
+      "styles.css",
+      "app.js",
+      "data/**/*",
+      ".env.example"
+    ],
+    "extraMetadata": {
+      "main": "electron-main.js"
+    },
+    "asar": false,
+    "electronDist": "node_modules/electron/dist",
+    "win": {
+      "target": [
+        "portable"
+      ]
+    }
+  }
+}
